@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+        .container 
+        {
+            border: 1px solid black;
+        }
+        .container .headerrow 
+        {
+            display: flex;
+            height: 100px;
+          
+        }
+        .container .headerrow .logo 
+        {
+            flex-basis: 25%;
+            flex-shrink: 1;
+            border: 1px solid red;
+            
+        }
+        .container .headerrow .menu 
+        {
+            flex-basis: 50%;
+            flex-shrink: 1;
+            border: 1px solid red;
+            display: flex;
+           justify-content: center;
+
+        }
+        .menu .menuitem 
+        {
+            border: 1px solid black;
+            flex-grow: 1;
+            padding: 40px;
+            text-align: center;
+            background-color: red;
+            color: white;
+        }
+        .container .headerrow .button
+        {
+            flex-basis: 25%;
+            flex-shrink: 1;
+            border: 1px solid red;
+        }
+        .menu div:nth-child(3)
+        {
+            position: relative;
+        }
+        .menu .menuitem .submenuitem 
+        {
+            position: absolute;
+            background-color: green;
+            left: 0%;
+            width: 100%;
+            top: 100%;
+            display: none;
+            z-index: 4;
+        }
+        .submenuitem .submenuitems 
+        {
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .menu .menuitem:hover 
+        {
+            background-color: yellow;
+            color: black;
+        }
+        .menuitem:hover .submenuitem 
+        {
+            display: block;
+        }
+        .submenuitem .submenuitems:hover 
+        {
+            background-color: aqua;
+            color: aliceblue;
+        }
+        .contentrow 
+        {
+            border: 1px solid green;
+            height: 500px;
+        }
+        .contentrow .contentcol1 
+        {
+            border: 1px solid black;
+            height: 500px;
+            box-sizing: border-box;
+            width: 50%;
+            float: left;
+        }
+        .contentrow .contentcol2 
+        {
+            border: 1px solid black;
+            height: 500px;
+            box-sizing: border-box;
+            width: 50%;
+            float: left;
+        }
+        .contentcol1 
+        {
+            position: relative;
+        }
+        .contentcol1 .contentcol1img1 
+        {
+            position: absolute;
+            z-index: 1;
+        }
+        .contentcol1 .contentcol1img2 
+        {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            z-index: 2;
+        }
+        .contentcol2 
+        {
+            position: relative;
+            text-align: right;
+        }
+        .contentcol2 .contentcol2img1 
+        {
+            position: absolute;
+            right: 0%;
+            z-index: 3;
+        }
+        .contentcol2 .contentcol2img2 
+        {
+            position: absolute;
+            right: 300px;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headerrow">
+            <div class="logo">1</div>
+            <div class="menu">
+                <div class="menuitem">home</div>
+                <div class="menuitem">about</div>
+                <div class="menuitem">course
+                    <div class="submenuitem">
+                        <div class="submenuitems">java</div>
+                        <div class="submenuitems">php</div>
+                        <div class="submenuitems">python</div>
+                        <div class="submenuitems">ruby</div>
+                    </div>
+                </div>
+                <div class="menuitem">feature</div>
+                <div class="menuitem">contact</div>
+            </div>
+            <div class="button">3</div>
+        </div>
+        <div class="contentrow">
+            <div class="contentcol1">
+                <img src="images/bg-01.jpg" alt="" height="300" width="400px" class="contentcol1img1">
+                <img src="images/black.jpg" alt="" height="300" width="400px" class="contentcol1img2">
+            </div>
+            <div class="contentcol2">
+                <img src="images/bg-01.jpg" alt="" height="300" width="400px" class="contentcol2img1">
+                <img src="images/black.jpg" alt="" height="300" width="400px" class="contentcol2img2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
